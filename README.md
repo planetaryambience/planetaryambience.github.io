@@ -1,2 +1,2 @@
-# planetaryambience.github.io
-portfolio
+# planetaryambience (jessie)
+portfolio website
