@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jessie - portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="window small">
+            <div class="toolbar">
+                <div class="column left">
+                    <p>helloWorld.txt</p>
+                </div>
+                <div class="column right">
+                    <span class="dot" style="background: palevioletred;"></span>
+                    <span class="dot" style="background: #99cc33;"></span>
+                    <span class="dot" style="background: #ffcc66;"></span>
+                </div>
+            </div>
+            <div class="content">
+                <p class="typeText"></p>
+            </div>  
+        </div>
+        <div class="window medium">
+            <div class="toolbar">
+                <div class="column left">
+                    <p>aboutMe.py</p>
+                </div>
+                <div class="column right">
+                    <span class="dot" style="background: palevioletred;"></span>
+                    <span class="dot" style="background: #99cc33;"></span>
+                    <span class="dot" style="background: #ffcc66;"></span>
+                </div>
+            </div>
+            <div class="content">
+                <p>
+                    person <span class="pink">=</span> <span class="green">Person</span>(<span class="yellow">"jessie"</span>, <span class="yellow">"NZ"</span>, 
+                    <span class="purple">TRUE</span>, <span class="purple">21</span>)
+                </p>
+                <p>
+                    aspiring_titles <span class="pink">=</span> [<span class="yellow">"full-stack developer"</span>,
+                    <span class="yellow">"programmer"</span>, <span class="yellow">"software developer"</span>]
+                </p>
+                <p>
+                    education <span class="pink">=</span>
+                    <span class="yellow">"bachelor of science, majoring in computer science"</span>
+                </p>
+                <p>
+                    current_employment <span class="pink">=</span>
+                    <span class="green">ResearchAssistant</span>(<span class="yellow">"UC"</span>,
+                    <span class="purple">2022</span>, <span class="purple">2023</span>)
+                </p>
+                <p>
+                    languages <span class="pink">=</span> [<span class="yellow">"python"</span>,
+                    <span class="yellow">"java"</span>, <span class="yellow">"typescript"</span>, 
+                    <span class="yellow">"C"</span>, <span class="yellow">"SQL"</span>, 
+                    <span class="yellow">"..."</span>]
+                </p>
+                <p>
+                    technology <span class="pink">=</span> [<span class="yellow">"react"</span>,
+                    <span class="yellow">"node.js"</span>, <span class="yellow">"junit"</span>, 
+                    <span class="yellow">"mySQL"</span>, <span class="yellow">"OOP"</span>, <span class="yellow">"sockets"</span>, <span class="yellow">"..."</span>]
+                </p>
+                <br/>
+                <p>
+                    <span class="blue">for</span> language <span class="blue">in</span> languages:
+                    <br/>&emsp;&emsp;&emsp;&emsp;<span class="green">print</span>(language)
+                </p>
+            </div>  
+        </div>
+        <div class="window big">
+            <div class="toolbar">
+                <div class="column left">
+                    <p>github.html</p>
+                </div>
+                <div class="column right">
+                    <span class="dot" style="background: palevioletred;"></span>
+                    <span class="dot" style="background: #99cc33;"></span>
+                    <span class="dot" style="background: #ffcc66;"></span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="repo-container">
+                    <div class="col-left">
+                        <img id="userImage" width="250px", height="250px">
+                        <hr>
+                        <h2 id="username">planetaryambience</h2>
+                        <a href="https://github.com/planetaryambience">https://github.com/planetaryambience</a>
+                    </div>
+                    <div class="col-right">
+                        <ul id="repos" style="width: 500px"></ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="window corner">
+            <div class="toolbar">
+                <div class="column left">
+                    <p>clock</p>
+                </div>
+                <div class="column right">
+                    <span class="dot" style="background: palevioletred;"></span>
+                    <span class="dot" style="background: #99cc33;"></span>
+                    <span class="dot" style="background: #ffcc66;"></span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="clock">
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="mins">00</span>
+                    <span>:</span>
+                    <span id="secs">00</span>
+                </div>
+            </div>  
+        </div>
+        <div class="window picture">
+            <div class="toolbar">
+                <div class="column left">
+                    <p>picture.jpeg</p>
+                </div>
+                <div class="column right">
+                    <span class="dot" style="background: palevioletred;"></span>
+                    <span class="dot" style="background: #99cc33;"></span>
+                    <span class="dot" style="background: #ffcc66;"></span>
+                </div>
+            </div>
+            <div class="content">
+                <img src="./picture.jpeg" width="270px" height="270px">
+            </div>  
+        </div>
+    </body>
+    <script src="typeWriter.js"></script>
+    <script src="clock.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="github.js", type="module"></script>  
+</html>
