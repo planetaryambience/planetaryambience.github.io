@@ -208,13 +208,13 @@ li {
 }
 
 #hours::after {
-    content: "HOURS";
+    content: "HOUR";
 }
 
 #mins::after {
-    content: "MINS";
+    content: "MIN";
 }
 
 #secs:after {
-    content: "SECS";
+    content: "SEC";
 }
