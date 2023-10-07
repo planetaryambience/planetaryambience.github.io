@@ -54,7 +54,6 @@ li {
 .content {
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
-    overflow: scroll;
 }
 
 .content p {
@@ -181,7 +180,8 @@ li {
     width: 30%;
     position: sticky;
     top: 0;
-    height: 300px;
+    height: 320px;
+    text-wrap: pretty;
 }
 
 .col-right {
@@ -248,10 +248,6 @@ li {
 
     li {
         font-size: 0.9em;
-    }
-
-    a, a:visited {
-        font-size: 0.8em;
     }
 
     .corner, .picture {
