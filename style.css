@@ -10,6 +10,7 @@
 }
 
 html {
+    width: 100%;
     min-height: 100vh;
 }
 
@@ -17,8 +18,12 @@ body {
     color: linen;
     font-family: Arial, Helvetica, sans-serif;
     margin: 30px;
+    background-color: lightpink;
+    position: absolute;
+    width: 100%;
     background-image: var(--gradient);
-    background-size: 200%;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
     animation: bg-animation 15s infinite alternate;
 }
 
@@ -32,15 +37,16 @@ p {
 }
 
 a, a:visited {
-    font-size: 10px;
+    font-size: 0.6em;
     color: mediumpurple;
 }
 
 li {
     list-style-type: none;
     border: 2px solid black;
-    padding: 15px;
-    margin: 5px;
+    padding: 3%;
+    margin: 1%;
+    font-size: 0.7em;
     background-color: #333333;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -78,25 +84,25 @@ li {
 }
 
 .small {
-    height: 150px;
-    width: 300px;
+    height: 10%;
+    width: 210px;
 }
 
 .medium {
-    font-size: 18px;
+    font-size: 0.9em;
     position: absolute;
-    transform: translate(15%, -17%);
-    width: 900px;
-    height: 300px;
+    width: 90%;
+    height: 340px;
     overflow: hidden;
+    margin: -5% 0% 0% -3%;
 }
 
 .big {
-    width: 800px;
-    height: 750px;
+    width: 80%;
+    height: 390px;
     position: absolute;
     z-index: -1;
-    transform: translate(110%, -11.5%);
+    margin-top: 85%;
 }
 
 .corner {
@@ -166,7 +172,7 @@ li {
 
 .repo-container {
     overflow: scroll;
-    height: 700px;
+    max-height: 350px;
     display: flex;
     scrollbar-color: #33ccff #333333;
 }
@@ -217,4 +223,110 @@ li {
 
 #secs:after {
     content: "SEC";
+}
+
+@media only screen and (max-width: 610px) {
+    .corner, .picture, .col-left {
+        display: none;
+    }
+
+    .col-right {
+        width: 100%;
+    }
+
+    #repos {
+        margin: 0;
+        padding: 0;
+    }
+}  
+
+
+@media only screen and (min-width: 610px) {
+    h2 {
+        font-size: 1em;
+    }
+
+    li {
+        font-size: 0.9em;
+    }
+
+    a, a:visited {
+        font-size: 0.8em;
+    }
+
+    .corner, .picture {
+        display: none;
+    }
+
+    .medium {
+        transform: translate(15%, 7%);
+        width: 80%;
+        height: 265px;
+    }
+
+    .big {
+        margin-top: 35%;
+        margin-left: 0;
+        width: 95%;
+    }
+  }
+
+@media only screen and (min-width: 850px) and (max-width: 992px) {
+    body {
+        background-size: 500% 500%;
+    }
+
+    .big {
+        margin-top: 30%;
+    }
+}
+ 
+ @media only screen and (min-width: 992px) {
+    li {
+        padding: 5px;
+    }
+
+    .medium {
+        transform: translate(20%, 11%);
+        width: 60%;
+    }
+
+    .big {
+        transform: translate(7%, -30%);
+        width: 85%; 
+    }
+
+    .col-left {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 1320px) {
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .medium {
+        transform: translate(20%, 25%);
+        width: 40%;
+    }
+
+    .big {
+        margin-top: 0;
+        transform: translate(85%, -7.5%);
+        width: 50%;
+        height: 750px;
+    }
+
+    .repo-container {
+        max-height: 700px;
+    }
+
+    .col-left {
+        width: 30%;
+    }
+
+    .corner, .picture {
+        display: block;
+    }
 }
