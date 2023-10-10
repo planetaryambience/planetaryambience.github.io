@@ -11,25 +11,39 @@
 
 html {
     width: 100%;
-    min-height: 100vh;
+    min-height: 105vh;
 }
 
 body {
     color: linen;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 30px;
+    margin: 15px;
     background-color: lightpink;
     position: absolute;
     width: 100%;
+    padding: 5px;
     background-image: var(--gradient);
     background-size: 200% 200%;
     background-repeat: no-repeat;
-    animation: bg-animation 15s infinite alternate;
+    animation: bg-animation 15s ease infinite alternate;
+    -webkit-animation: bg-animation 15s ease infinite alternate;
+    -moz-animation: bg-animation 15s ease infinite alternate;
 }
 
-@keyframes bg-animation {
-    0% {background-position: left;}
-    100% {background-position: right;}
+@-webkit-keyframes bg-animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes bg-animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes bg-animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
 }
 
 p {
@@ -83,25 +97,24 @@ li {
 }
 
 .small {
-    height: 10%;
+    height: 70px;
     width: 210px;
+    font-size: 0.8em;
 }
 
 .medium {
-    font-size: 0.9em;
+    font-size: 1em;
     position: absolute;
     width: 90%;
     height: 340px;
     overflow: hidden;
-    margin: -5% 0% 0% -3%;
+    margin: 1% 0% 0% -3%;
 }
 
 .big {
     width: 80%;
-    height: 390px;
-    position: absolute;
-    z-index: -1;
-    margin-top: 85%;
+    height: 90%;
+    margin-top: 95%;
 }
 
 .corner {
@@ -257,38 +270,34 @@ li {
     .medium {
         transform: translate(15%, 7%);
         width: 80%;
-        height: 265px;
+        height: 25%;
     }
 
     .big {
         margin-top: 35%;
         margin-left: 0;
         width: 95%;
+        height: 600px;
+    }
+
+    .repo-container {
+        max-height: 550px;
     }
   }
-
-@media only screen and (min-width: 850px) and (max-width: 992px) {
-    body {
-        background-size: 500% 500%;
-    }
-
-    .big {
-        margin-top: 30%;
-    }
-}
  
- @media only screen and (min-width: 992px) {
+ @media only screen and (min-width: 850px) {
     li {
         padding: 5px;
     }
 
     .medium {
-        transform: translate(20%, 11%);
+        transform: translate(20%, 5%);
         width: 60%;
+        height: 25%;
     }
 
     .big {
-        transform: translate(7%, -30%);
+        transform: translate(5%, -10%);
         width: 85%; 
     }
 
@@ -303,8 +312,11 @@ li {
     }
 
     .medium {
-        transform: translate(20%, 25%);
-        width: 40%;
+        transform: translate(15%, -3%);
+        width: 45%;
+        position: absolute;
+        height: 265px;
+        z-index: 1;
     }
 
     .big {
@@ -312,6 +324,7 @@ li {
         transform: translate(85%, -7.5%);
         width: 50%;
         height: 750px;
+        position: absolute;
     }
 
     .repo-container {
@@ -324,5 +337,15 @@ li {
 
     .corner, .picture {
         display: block;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .medium {
+        font-size: 1.3em;
+    }
+
+    .repo-container {
+        font-size: 1.2em;
     }
 }
